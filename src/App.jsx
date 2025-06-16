@@ -2,6 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import ProductList from './PreferencesToggle.jsx'; 
 import Header from './header.jsx';
 import Category from './searchbycategory.jsx'; 
+import Barcode from './searchbarcode.jsx';
 import { Routes , Route } from 'react-router-dom';
 
 function App() {
@@ -25,19 +26,15 @@ fetch(`https://world.openfoodfacts.org/cgi/search.pl?search_terms=${searchTerm}&
 
   return (
     <div className="min-h-screen bg-gray-50">
-      
-
-<main className="p-5 max-w-7xl mx-auto">
+      <main className="p-5 max-w-7xl mx-auto">
         <Routes>
-         
-          <Route path="/"element={
+         <Route path="/"element={
               <>
               <Header
          searchInputValue={searchTerm}
          onSearchChange={handleSearchChange}
       />
-
-                {loading && <p className="text-center text-gray-700">Loading products...</p>}
+              {loading && <p className="text-center text-gray-700">Loading products...</p>}
                 {!loading && !error && products.length > 0 && (
                   <ProductList products={products} />
                 )}
@@ -47,7 +44,7 @@ fetch(`https://world.openfoodfacts.org/cgi/search.pl?search_terms=${searchTerm}&
 
           
           <Route path="/category" element={<Category />} />
-
+           <Route path="/Barcode" element={<Barcode />} />
         </Routes>
       </main>
       </div>

@@ -41,14 +41,16 @@ if (onSearchChange) {
         </button>
       </form>
       <nav className="hidden md:flex items-center space-x-6">
-        
-        
-        
-        
-        <Link to="/category" className="text-gray-700 font-semibold text-lg relative group hover:text-[#5B2B00] transition-colors duration-200">
+         <Link to="/category" className="text-gray-700 font-semibold text-lg relative group hover:text-[#5B2B00] transition-colors duration-200">
           Category
           <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#5B2B00] group-hover:w-full transition-all duration-300"></span>
         </Link>
+          
+        <Link to="/Barcode" className="text-gray-700 font-semibold text-lg relative group hover:text-[#5B2B00] transition-colors duration-200">
+          Barcode
+          <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#5B2B00] group-hover:w-full transition-all duration-300"></span>
+        </Link>
+
       </nav>
       <div className="md:hidden">
         <button className="text-gray-700 text-2xl">
