@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import Category from './searchbycategory';
+import { Link }from 'react-router-dom';
 function Header({ searchInputValue, onSearchChange }) {
 const [localSearchTerm, setLocalSearchTerm] = useState(searchInputValue);
 useEffect(() => {
@@ -15,7 +17,7 @@ if (onSearchChange) {
   };
 
   return (
-    <header className="flex items-center justify-between p-4 md:px-8 bg-[#F7F3F0] shadow-md font-sans">
+    <header className="flex items-center justify-between  p-4 md:px-8 bg-[#F7F3F0] shadow-md font-sans">
       <div className="flex items-center space-x-2">
         <div className="bg-white text-black px-2 py-1 rounded text-sm font-bold">
           FOOD
@@ -39,18 +41,14 @@ if (onSearchChange) {
         </button>
       </form>
       <nav className="hidden md:flex items-center space-x-6">
-        <a href="#" className="text-gray-700 font-semibold text-lg relative group">
+        
+        
+        
+        
+        <Link to="/category" className="text-gray-700 font-semibold text-lg relative group hover:text-[#5B2B00] transition-colors duration-200">
           Category
           <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#5B2B00] group-hover:w-full transition-all duration-300"></span>
-        </a>
-        <a href="#" className="text-gray-700 font-semibold text-lg relative group">
-          Barcode
-          <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#5B2B00] group-hover:w-full transition-all duration-300"></span>
-        </a>
-        <a href="#" className="text-gray-700 font-semibold text-lg relative group">
-          GitHub
-          <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#5B2B00] group-hover:w-full transition-all duration-300"></span>
-        </a>
+        </Link>
       </nav>
       <div className="md:hidden">
         <button className="text-gray-700 text-2xl">

@@ -7,14 +7,13 @@ return (    <header className="flex items-center justify-between p-4 md:px-8 bg-
         </div>
         <span className="text-gray-700 font-semibold text-lg">Explorer</span>
       </div>
-    <form onSubmit={handleSearchSubmit} className="flex items-center border border-gray-300 rounded-full overflow-hidden bg-white flex-grow max-w-lg mx-4">
+    <form className="flex items-center border border-gray-300 rounded-full overflow-hidden bg-white flex-grow max-w-lg mx-4">
         <input
           type="text"
           id="search-input" 
           placeholder="Search Open Food Facts..."
           className="flex-grow border-none px-4 py-2 text-base outline-none bg-transparent placeholder-gray-500"
-          value={localSearchTerm} 
-          onChange={handleInputChange}
+        
         />
         <button
           type="submit" 
