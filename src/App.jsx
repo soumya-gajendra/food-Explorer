@@ -41,9 +41,7 @@ fetch(`https://world.openfoodfacts.org/cgi/search.pl?search_terms=${searchTerm}&
                
               </>
             } />
-
-          
-          <Route path="/category" element={<Category />} />
+           <Route path="/category" element={<Category />} />
            <Route path="/Barcode" element={<Barcode />} />
         </Routes>
       </main>
